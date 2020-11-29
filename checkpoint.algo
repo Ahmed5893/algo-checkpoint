@@ -1,0 +1,22 @@
+ALGORITHM string_count
+VAR 
+
+c:CHAR:='';    
+ccount:INTEGER:=0;
+wcount:INTEGER:=0;
+vcount:INTEGER:=0;   
+BEGIN
+WHILE (c<>'.') DO
+    Read(c);
+ccount:=ccount+1;    
+IF (c='a'OR c='e'OR c='i'OR c='o' OR c='u' OR c='y') THEN
+    vcount:=vcount+1;
+END_IF 
+IF (c=' ') THEN
+    wcount:=wcount+1;
+END_IF  
+END_WHILE
+Write('char count=',ccount);
+Write('words count=',wcount);
+Write('vowels count=',vcount);
+END
